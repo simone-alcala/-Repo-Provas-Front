@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Box, Button, Divider, Link, TextField, Typography } from '@mui/material';
 
-//import { signUp } from '../../services/api/AuthApi';
+import { signUp } from '../../services/api/AuthApi';
 
 import PasswordInput from '../../components/PasswordInput';
 import Message, { MessageProps } from '../../components/Message';
@@ -103,14 +103,14 @@ function SignUp() {
     const { email, password } = formData;
 
     try {
-      /*await signUp({ email, password });
+      await signUp({ email, password });
       setMessage({ 
         ...message, 
         severity: 'success', 
         text: 'Cadastro realizado com sucesso. Redirecionando para login...' 
       });
       setShowMessage(true);
-      setTimeout(() => { navigate('/sign-in', { replace: true }) }, 3000);*/
+      setTimeout(() => { navigate('/sign-in', { replace: true }) }, 3000);
     } catch (err: any) {
       console.log(err);
       setMessage({ 
