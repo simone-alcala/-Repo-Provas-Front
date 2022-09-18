@@ -1,10 +1,12 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Box, Button, Divider, Link, TextField, Typography } from '@mui/material';
-import { signIn } from '../../services/api/AuthApi';
+
+//import { useAuth } from '../../contexts/AuthProvider';
+//import { signIn } from '../../services/api/AuthApi';
+
 import PasswordInput from '../../components/PasswordInput';
 import Message, { MessageProps } from '../../components/Message';
-import { useAuth } from '../../contexts/AuthProvider';
 
 type FormDataType = {
   email: string,
@@ -65,7 +67,7 @@ const styles = {
 
 function SignIn() {
 
-  const { login } = useAuth();
+  //const { login } = useAuth();
   const navigate = useNavigate();
   const [showMessage, setShowMessage] = useState(false);
   const [disableButton, setDisableButton] = useState(false);
@@ -88,7 +90,7 @@ function SignIn() {
   async function sendInfo() {
     const { email, password } = formData;
     try {
-      const result = await signIn({ email, password });
+      /*const result = await signIn({ email, password });
       setMessage({ 
         ...message, 
         severity: 'success', 
@@ -98,7 +100,7 @@ function SignIn() {
       setTimeout(() => { 
         navigate('/home', { replace: true });
         login(result.data.token);
-      }, 3000);
+      }, 3000);*/
     } catch (err: any) {
       console.log(err);
       setMessage({ 

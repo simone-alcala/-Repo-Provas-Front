@@ -9,8 +9,6 @@ import Home from '../../pages/Home';
 import SignUp from '../../pages/SignUp';
 import SignIn from '../../pages/SignIn';
 
-
-
 function App() {
   return (
     <AuthProvider>
@@ -18,8 +16,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/home' element={<Home/>}/>
-          <Route path='/sign-up' element={<SignIn/>}/>
-          <Route path='/sign-in' element={<SignUp/>}/>
+          <Route path='/sign-in' element={<SignIn/>}/>
+          <Route path='/sign-up' element={<SignUp/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
