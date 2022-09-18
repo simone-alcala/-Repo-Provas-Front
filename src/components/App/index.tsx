@@ -10,6 +10,19 @@ import SignUp from '../../pages/SignUp';
 
 function App() {
   return (
+      <BrowserRouter>
+        <Routes>         
+          <Route path='/' element={ <Home/> }/>         
+          <Route path='/sign-up' element={ <SignUp />} />
+          <Route path='/sign-in' element={ <SignIn />} />
+        </Routes>
+      </BrowserRouter>
+  );
+}
+
+/*
+function App() {
+  return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -26,5 +39,5 @@ function App() {
     </AuthProvider>
   );
 }
-
+*/
 export default App;
