@@ -58,7 +58,7 @@ const styles = {
   },
   buttonGitHub: {
     width: '100%',
-    backgroundColor: '#424445',
+    //backgroundColor: '#424445',
     margin: 1,
   }
 }
@@ -129,7 +129,7 @@ function SignIn() {
             Login
           </Typography>
 
-          <Button variant='contained' type='button' sx={ styles.buttonGitHub }>  
+          <Button variant='contained' type='button' color='secondary' sx={ styles.buttonGitHub }>  
               ENTRAR COM GITHUB
           </Button>   
 

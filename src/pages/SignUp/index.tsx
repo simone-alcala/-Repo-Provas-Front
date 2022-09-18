@@ -58,7 +58,7 @@ const styles = {
   },
   buttonGitHub: {
     width: '100%',
-    backgroundColor: '#424445',
+//    backgroundColor: '#424445',
     margin: 1,
   }
 }
@@ -139,7 +139,7 @@ function SignUp() {
             Cadastro
           </Typography>
 
-          <Button variant='contained' type='button' sx={ styles.buttonGitHub }>  
+          <Button variant='contained' color='secondary' type='button' sx={ styles.buttonGitHub }>  
               ENTRAR COM GITHUB
           </Button>   
 
