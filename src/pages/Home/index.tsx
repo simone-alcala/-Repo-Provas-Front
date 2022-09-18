@@ -1,10 +1,10 @@
 import React from 'react';
+import './../../assets/styles/reset.css';
 
 function Home() {
-  return(
+  return (
     <>
-      Home
-    </>
+    HOME</>
   );
 }
 
