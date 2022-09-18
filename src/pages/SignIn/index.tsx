@@ -112,63 +112,61 @@ function SignIn() {
   }
 
   return ( 
-    <>
-      <Box sx={ styles.container } component='form' onSubmit={handleSubmit}>
+    <Box sx={ styles.container } component='form' onSubmit={handleSubmit}>
 
-        {showMessage && 
-          <Message 
-            text={message.text} 
-            severity={message.severity} 
-            onclose={() => { setShowMessage(!showMessage) }} 
-          />
-        }   
-        
-        <Box sx={ styles.formData }>
+      {showMessage && 
+        <Message 
+          text={message.text} 
+          severity={message.severity} 
+          onclose={() => { setShowMessage(!showMessage) }} 
+        />
+      }   
+      
+      <Box sx={ styles.formData }>
 
-          <Typography variant='h4' component='h1' sx={ styles.title }>
-            Login
-          </Typography>
+        <Typography variant='h4' component='h1' sx={ styles.title }>
+          Login
+        </Typography>
 
-          <Button variant='contained' type='button' color='secondary' sx={ styles.buttonGitHub }>  
-              ENTRAR COM GITHUB
-          </Button>   
+        <Button variant='contained' type='button' color='secondary' sx={ styles.buttonGitHub }>  
+            ENTRAR COM GITHUB
+        </Button>   
 
-          <Divider sx={ styles.divider } variant='middle'> 
-            <Typography  component='span'> ou </Typography>
-          </Divider>
+        <Divider sx={ styles.divider } variant='middle'> 
+          <Typography  component='span'> ou </Typography>
+        </Divider>
 
-          <TextField name='email'
-            label='Email' 
-            type='email'
-            sx={ styles.input } 
-            variant='outlined' 
-            value={ formData.email } 
-            onChange={ handleInputChange }
-            required={true}
-          />
+        <TextField name='email'
+          label='Email' 
+          type='email'
+          sx={ styles.input } 
+          variant='outlined' 
+          value={ formData.email } 
+          onChange={ handleInputChange }
+          required={true}
+        />
 
-          <PasswordInput name='password' 
-            label='Senha *' 
-            sx={ styles.input } 
-            value={ formData.password } 
-            onChange={ handleInputChange }
-          />
-  
-          <Box sx={ styles.actionsContainer }>
+        <PasswordInput name='password' 
+          label='Senha *' 
+          sx={ styles.input } 
+          value={ formData.password } 
+          onChange={ handleInputChange }
+        />
 
-            <Link component={ RouterLink } to='/sign-up'> 
-              <Typography> Já possuo cadastro </Typography>  
-            </Link>
-            
-            <Button variant='contained' type='submit' disabled={ disableButton }>  
-              Entrar
-            </Button>     
+        <Box sx={ styles.actionsContainer }>
 
-          </Box>
-        
+          <Link component={ RouterLink } to='/sign-up'> 
+            <Typography> Já possuo cadastro </Typography>  
+          </Link>
+          
+          <Button variant='contained' type='submit' disabled={ disableButton }>  
+            Entrar
+          </Button>     
+
         </Box>
+      
       </Box>
-    </>
+    </Box>
   );
 }
 
