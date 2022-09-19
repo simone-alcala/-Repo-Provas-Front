@@ -98,7 +98,7 @@ function SignIn() {
       });
       setShowMessage(true);
       setTimeout(() => { 
-        navigate('/home', { replace: true });
+        navigate('/tests', { replace: true });
         login(result.data.token);
       }, 3000);
     } catch (err: any) {

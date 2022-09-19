@@ -8,22 +8,23 @@ type Props = {
 }
 
 function PrivateRoute({ children }: Props) {  
-  const [authed, setAuthed] = useState(false);
+  const [authed, setAuthed] = useState(true);
   const { logout, getToken } = useAuth();
   
   useEffect(() => {
     const token = getToken();
     const promise = axiosConfig.post('/token', { token } );
 
-    promise.then(() => { setAuthed(true) });
+    promise.then(() => { console.log(children);setAuthed(true) });
     promise.catch(() => { 
+
       logout();
       setAuthed(false);
     });
 
   },[authed])
   
-  return ( authed ? children : <Navigate to='/' replace={true} />);
+  return ( authed ? children : <Navigate to='/sign-in' replace={true} />);
 }
 
 export default PrivateRoute;

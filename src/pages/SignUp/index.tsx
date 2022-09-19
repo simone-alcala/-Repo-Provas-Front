@@ -60,7 +60,6 @@ const styles = {
   },
   buttonGitHub: {
     width: '100%',
-//    backgroundColor: '#424445',
     margin: 1,
   }
 }
