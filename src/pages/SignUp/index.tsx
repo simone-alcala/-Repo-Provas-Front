@@ -135,7 +135,7 @@ function SignUp() {
         }   
         
         <Box sx={ styles.formData }>
-
+{/*
           <Typography variant='h4' component='h1' sx={ styles.title }>
             Cadastro
           </Typography>
@@ -147,7 +147,7 @@ function SignUp() {
           <Divider sx={ styles.divider } variant='middle'> 
             <Typography  component='span'> ou </Typography>
           </Divider>
-
+*/}
           <TextField name='email'
             label='Email' 
             type='email'

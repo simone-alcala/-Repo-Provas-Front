@@ -129,7 +129,7 @@ function SignIn() {
         <Typography variant='h4' component='h1' sx={ styles.title }>
           Login
         </Typography>
-
+{/*
         <Button variant='contained' type='button' color='secondary' sx={ styles.buttonGitHub }>  
             ENTRAR COM GITHUB
         </Button>   
@@ -137,7 +137,7 @@ function SignIn() {
         <Divider sx={ styles.divider } variant='middle'> 
           <Typography  component='span'> ou </Typography>
         </Divider>
-
+*/}
         <TextField name='email'
           label='Email' 
           type='email'
@@ -158,7 +158,7 @@ function SignIn() {
         <Box sx={ styles.actionsContainer }>
 
           <Link component={ RouterLink } to='/sign-up'> 
-            <Typography> Já possuo cadastro </Typography>  
+            <Typography> Ainda não possuo cadastro </Typography>  
           </Link>
           
           <Button variant='contained' type='submit' disabled={ disableButton }>  

@@ -76,11 +76,13 @@ function Header() {
         </Box>
       </Box>
       <Divider sx={ styles.divider }/>
+{/*     
       <Box sx={ styles.buttons }>
         <Button variant='outlined' sx={ styles.button }> DISCIPLINAS </Button>
         <Button variant='outlined' sx={ styles.button }> INSTRUTOR(A) </Button>
         <Button variant='outlined' sx={ styles.button }> ADICIONAR </Button>
       </Box>
+*/}      
     </Box>
   )
 }
